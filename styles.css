@@ -1,0 +1,530 @@
+/* 全局样式 */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('./image/content-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* 上边导航栏样式 */
+.top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: 60px;
+}
+
+.nav-logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-shadow: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* 导航栏链接样式 */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px;
+}
+
+/* 返回首页按钮 */
+.nav-links a[href="index.html"] {
+  background-image: url('./image/home-icon.png'); /* 添加一个首页图标 */
+}
+
+/* 关于我按钮 */
+.nav-links a[href="#about-me"] {
+  background-image: url('./image/about-me-icon.png');
+}
+
+/* 项目展示按钮 */
+.nav-links a[href="#projects"] {
+  background-image: url('./image/project-icon.png');
+}
+
+/* 联系我按钮 */
+.nav-links a[href="#contact"] {
+  background-image: url('./image/contact-icon.png');
+}
+
+.nav-links a:hover {
+  color: #1a73e8;
+}
+
+/* 左侧侧边栏样式 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background: none;
+  color: #1a73e8;
+  padding: 20px;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+}
+
+.sidebar-nav a {
+  display: block;
+  color: #1a73e8;
+  text-decoration: none;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+  color: #4a90e2;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  text-align: center;
+  padding-top: 20px;
+  color: #1a73e8;
+}
+
+.time-display {
+  text-align: center;
+}
+
+#current-date {
+  font-size: 1.8rem;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+#current-time {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+#ancient-time {
+  font-size: 1.5rem;
+  color: #1a73e8;
+  margin-bottom: 20px;
+}
+
+#time-description {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.poetry {
+  margin-top: 40px;
+  font-style: italic;
+  color: #1a73e8;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#poetry-content {
+  font-size: 1.5rem;
+  margin: 0;
+  line-height: 1.8;
+  color: #1a73e8;
+}
+
+#poetry-author {
+  font-size: 1.3rem;
+  text-align: right;
+  margin: 0;
+  color: #1a73e8;
+}
+
+/* 主内容区域样式 */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-top: 60px;
+  background: none;
+  margin-left: 300px;
+}
+
+.header {
+  background: none;
+  color: #333;
+  padding: 40px 0;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.about-me, .projects, .contact {
+  background: none;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: none;
+  margin-bottom: 30px;
+}
+
+.about-me h2, .projects h2, .contact h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* 项目展示样式 */
+.projects {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  color: #1a73e8;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.project-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.project-card .project-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-card .project-link:hover {
+  color: #4a90e2;
+}
+
+.view-details-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #4a90e2;
+}
+
+.project-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.detail-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.detail-content {
+  margin-top: 20px;
+}
+
+.tech-stack {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-stack li {
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* 联系我样式 */
+.contact {
+  background: none;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.contact h2 {
+  color: #1a73e8;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact p, .contact a {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact a:hover {
+  color: #1a73e8;
+}
+
+/* 隐藏所有内容 */
+.main-content > * {
+  display: none;
+}
+
+/* 显示目标内容 */
+#header,
+#about-me,
+#contact {
+  display: block;
+}
+
+/* 导航栏链接点击效果 */
+#about-me:target ~ #header,
+#about-me:target ~ #about-me,
+#about-me:target ~ #contact {
+  display: block;
+}
+
+#projects:target ~ #projects {
+  display: block;
+}
+
+#contact:target ~ #header,
+#contact:target ~ #contact {
+  display: block;
+}
+
+/* 关于我样式 */
+.about-me {
+  background: none;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.about-me h2 {
+  color: #1a73e8;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+}
+
+/* 动态效果容器 */
+.dynamic-background {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, #87CEEB, #B0E0E6);
+  overflow: hidden;
+}
+
+/* 云朵样式 */
+.cloud {
+  position: absolute;
+  background: white;
+  width: 150px;
+  height: 60px;
+  border-radius: 50px;
+  animation: moveCloud 20s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+
+.cloud::before {
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  left: 20px;
+}
+
+.cloud::after {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  right: 20px;
+}
+
+/* 云朵动画 */
+@keyframes moveCloud {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 太阳样式 */
+.sun {
+  position: absolute;
+  background: #FFD700;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 20px;
+  right: 20px;
+  animation: rotateSun 10s linear infinite;
+}
+
+/* 太阳动画 */
+@keyframes rotateSun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 山样式 */
+.mountain {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 150px solid #556B2F;
+}
+
+/* 树样式 */
+.tree {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 60px;
+  background: #8B4513;
+}
+
+.tree::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #228B22;
+  border-radius: 50%;
+  top: -20px;
+  left: -10px;
+}
+
+/* 树的位置 */
+.tree:nth-child(1) {
+  left: 20%;
+}
+
+.tree:nth-child(2) {
+  left: 40%;
+}
+
+.tree:nth-child(3) {
+  left: 60%;
+}
+
