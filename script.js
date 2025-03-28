@@ -140,12 +140,10 @@ function handleProjectClick(projectId) {
 // 动态生成项目列表
 function renderProjects() {
   const projects = [
-    { id: 1, name: '个人博客系统', description: '一个基于 React 和 Node.js 的个人博客系统' },
-    { id: 2, name: '在线购物平台', description: '一个全栈电商平台，使用 Vue.js 和 Django 开发' },
-    { id: 3, name: '任务管理工具', description: '一个轻量级的任务管理工具，使用 Flutter 开发' },
-    { id: 4, name: '在线学习平台', description: '一个在线学习平台，提供课程管理、视频播放和在线测试功能' },
-    { id: 5, name: '智能家居控制系统', description: '一个智能家居控制系统，支持远程控制家电设备' },
-    { id: 6, name: '社交媒体应用', description: '一个社交媒体应用，支持用户发布动态、评论和点赞' }
+    { id: 1, name: '智能客服系统', description: '一个基于 NLP 和 llama 的智能客服系统' },
+    { id: 2, name: '智能魔镜项目', description: '一个软硬件协同的项目，使用 Vue.js 和 Django 开发' },
+    { id: 3, name: '智能零售项目', description: '通过前沿技术为消费者打造便捷、个性化的购物体验，助力企业降本增效' },
+    { id: 4, name: '智能办公协作机器⼈', description: '⽀持嵌套指令理解的多模态服务机器⼈' }
   ];
 
   const projectGrid = document.querySelector('.project-grid');
